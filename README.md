@@ -2,6 +2,24 @@
 
 # Project overview
 - This project explores an e-commerce database using PostgreSQL, showcasing various SQL skills such as joins, stored procedures, triggers, transactions, and analytical queries. The dataset includes different tables such as customers, orders, payments, reviews, products, and sellers, allowing for in-depth analysis of customer behavior, sales trends, and order fulfillment.
+# Database creation and data import
+**Creating the database:**
+- First thing i did was creating the database : CREATE DATABASE ecommerce_db;
+
+**Creating the tables with primary keys:**
+- Example: CREATE TABLE customers (
+    customer_id text PRIMARY KEY,
+    customer_unique_id text,
+    customer_zipcode VARCHAR,
+    customer_city VARCHAR,
+    customer_state VARCHAR);
+
+**Adding foreign keys:**
+- Example: ALTER TABLE orders 
+ADD CONSTRAINT fk_orders_customers
+FOREIGN KEY (customer_id) 
+REFERENCES customers(customer_id);  
+
 # SQL Techniques used
 **Data extraction and analysis:**
 - Used JOINs (inner joins, self joins, CTEs, subqueries) to analyze customer behavior and spending
