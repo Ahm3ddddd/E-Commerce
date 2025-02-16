@@ -18,7 +18,10 @@
 - Example: ALTER TABLE orders 
 ADD CONSTRAINT fk_orders_customers
 FOREIGN KEY (customer_id) 
-REFERENCES customers(customer_id);  
+REFERENCES customers(customer_id);
+
+**Data import:**
+- Using '\copy' and built in import method
 
 # SQL Techniques used
 **Data extraction and analysis:**
